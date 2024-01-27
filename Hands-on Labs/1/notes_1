@@ -1,0 +1,22 @@
+$ git clone https://github.com/jleetutorial/maven-project.git
+
+$ cd maven-project/
+
+$ trivy fs .
+2024-01-27T15:29:36.902Z        INFO    Need to update DB
+2024-01-27T15:29:36.905Z        INFO    Downloading DB...
+30.57 MiB / 30.57 MiB [-----------------------------------------] 100.00% 20.89 MiB p/s 1s
+2024-01-27T15:29:38.947Z        INFO    Detected OS: unknown
+2024-01-27T15:29:38.948Z        INFO    Number of PL dependency files: 0
+
+$ trivy fs . > scan
+
+$ cd ../
+
+$ trivy fs maven-project/
+
+$ trivy fs maven-project/ > scan
+
+$ trivy fs maven-project/pom.xml
+
+$ trivy fs maven-project/pom.xml > scan
