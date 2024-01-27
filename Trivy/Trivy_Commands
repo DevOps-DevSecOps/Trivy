@@ -16,5 +16,8 @@ $ trivy fs .                                                                # to
 $ trivy fs . > scan                                                         # to scan all files and saving the output into a file in current folder/directory
 $ trivy fs FOLDER_NAME/                                                     # to scan all files in a given name of folder/directory
 $ trivy fs FOLDER_NAME/ > scan                                              # to scan all files in a given name of folder/directory and saving the output into a file in current folder/directory
-$ trivy fs FOLDER_NAME/FILE_NAME
-$ trivy fs FOLDER_NAME/FILE_NAME > scan
+
+[Git Repository]
+$ trivy repo https://github.com/knqyf263/trivy-ci-test
+$ trivy repo https://github.com/knqyf263/trivy-ci-test.git
+$ trivy repo https://github.com/knqyf263/trivy-ci-test.git > scan
