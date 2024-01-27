@@ -1,4 +1,5 @@
-It is an open-source vulnerability scanner for your docker images announced by Aqua Security.
+It is an open-source vulnerability scanner.
+Trivy scans Terraform, CloudFormation, Docker, Kubernetes, and many other configuration files for security issues right alongside vulnerabilities.
 Installation on Ubuntu.
 $ sudo apt-get install wget apt-transport-https gnupg lsb-release
 $ wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
