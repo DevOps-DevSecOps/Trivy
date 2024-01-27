@@ -1,0 +1,25 @@
+trivy
+
+trivy -v
+trivy --version
+
+[Docker - scan an image]
+trivy i Docker_IMAGE_NAME
+trivy i -f json -o FILE_NAME Docker_IMAGE_NAME
+trivy image Docker_IMAGE_NAME
+trivy image -f json -o FILE_NAME Docker_IMAGE_NAME
+trivy image --severity HIGH,CRITICAL Docker_IMAGE_NAME
+trivy image Docker_IMAGE_NAME:TAG
+trivy image DOCKER_HUB_USER_ID/REPOSITORY_NAME
+trivy image -f json -o FILE_NAME DOCKER_HUB_USER_ID/REPOSITORY_NAME
+trivy image --severity HIGH,CRITICAL DOCKER_HUB_USER_ID/REPOSITORY_NAME
+trivy image DOCKER_HUB_USER_ID/REPOSITORY_NAME:TAG
+trivy image DOCKER_HUB_USER_ID/REPOSITORY_NAME:TAG > FILE_NAME                                      # saving the output into a file 
+
+[FileSystem - scan local filesystem]
+trivy fs .                                                                                          # to scan all files in current folder/directory
+trivy fs . > FILE_NAME                                                                              # to scan all files and saving the output into a file in current folder/directory
+trivy fs FOLDER_NAME/                                                                               # to scan all files in a given name of folder/directory
+trivy fs FOLDER_NAME/ > FILE_NAME                                                                   # to scan all files in a given name of folder/directory and saving the output into a file in current folder/directory
+trivy fs FOLDER_NAME/FILE_NAME
+trivy fs FOLDER_NAME/FILE_NAME > FILE_NAME
