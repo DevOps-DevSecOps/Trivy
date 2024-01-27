@@ -1,0 +1,20 @@
+[Docker - scan an image]
+$ trivy i nginx
+$ trivy i -f json -o results.json nginx
+$ trivy image nginx
+$ trivy image nginx:1.14.2
+$ trivy image -f json -o results.json nginx
+$ trivy image --severity HIGH,CRITICAL nginx
+$ trivy image --severity HIGH,CRITICAL ruby:2.4.0
+$ trivy image --severity HIGH,CRITICAL jenkins/jenkins
+$ trivy image -f json -o results.json betterdoc/templater-service
+$ trivy image linuxacademycontent/kubeserve:v1
+$ trivy image linuxacademycontent/kubeserve:v1 > scan.txt
+
+[FileSystem - scan local filesystem]
+$ trivy fs .                                                                # to scan all files in current folder/directory
+$ trivy fs . > scan                                                         # to scan all files and saving the output into a file in current folder/directory
+$ trivy fs FOLDER_NAME/                                                     # to scan all files in a given name of folder/directory
+$ trivy fs FOLDER_NAME/ > scan                                              # to scan all files in a given name of folder/directory and saving the output into a file in current folder/directory
+$ trivy fs FOLDER_NAME/FILE_NAME
+$ trivy fs FOLDER_NAME/FILE_NAME > scan
