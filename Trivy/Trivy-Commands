@@ -21,6 +21,7 @@ trivy fs .                                                                      
 trivy fs . > FILE_NAME                                                                              # to scan all files and saving the output into a file in current folder/directory
 trivy fs FOLDER_NAME/                                                                               # to scan all files in a given name of folder/directory
 trivy fs FOLDER_NAME/ > FILE_NAME                                                                   # to scan all files in a given name of folder/directory and saving the output into a file in current folder/directory
+trivy fs --security-checks vuln,config /FOLDER_NAME/FOLDER_NAME/FOLDER_NAME
 
 [Git Repository - scan remote repository]
 trivy repo REMOTE_REPOSITORY_URL(HTTPS/SSH)
