@@ -10,12 +10,14 @@ $ trivy image --severity HIGH,CRITICAL jenkins/jenkins
 $ trivy image -f json -o results.json betterdoc/templater-service
 $ trivy image linuxacademycontent/kubeserve:v1
 $ trivy image linuxacademycontent/kubeserve:v1 > scan.txt
+$ trivy image --format json -o report.json adijaiswal/valentine:v1
 
 [FileSystem - scan local filesystem]
 $ trivy fs .                                                                # to scan all files in current folder/directory
 $ trivy fs . > scan                                                         # to scan all files and saving the output into a file in current folder/directory
 $ trivy fs FOLDER_NAME/                                                     # to scan all files in a given name of folder/directory
 $ trivy fs FOLDER_NAME/ > scan                                              # to scan all files in a given name of folder/directory and saving the output into a file in current folder/directory
+$ trivy fs --format table -o report.html .
 $ trivy fs --security-checks vuln,config /var/lib/jenkins/workspace/JOB_FOLDER_NAME
 
 [Git Repository - scan remote repository]
